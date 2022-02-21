@@ -1,0 +1,92 @@
+\documentclass[11pt, a4paper]{article} % setsfont size and layout
+
+%% required packages %%
+\usepackage{mystyle} 
+\usepackage[margin=2.5cm]{geometry} % margins
+
+%% Here the main part of the document begins %%
+
+\begin{document}
+
+%% Header on first page with course information etc. %%
+\begin{tabular}{p{14.5cm}}
+	{\large \textbf{ECO 102: Topics in Economics}} \\
+	Ecole Polytechnique, Spring 2022  \\
+	\textit{Professors}: Geoffroy Barrows, Benoit Schmutz \\
+	\textit{Teaching Assistants}: Arnault Chatelain, Maddalena Conte \\
+	\hline
+	\\
+\end{tabular}
+
+\begin{center}
+	{\Large \textbf{TD2: Monte Carlo and OLS Regression}}
+	\vspace{2mm}
+	
+\end{center} 
+
+\vspace{0.4cm}
+
+In this exercise, you will run what is called a Monte Carlo experiment.  You will generate fake data using stata's random number generator.  You will then analyze the data.  You will compute some descriptive statistics.  You will also estimate parameters using OLS and display the results.  Please generate a pdf with all your results and do a very short description of the results.  To compile the pdf, you should use a text editor like Latex.
+
+\section*{A Very Brief Introduction to Latex}
+
+Latex is a software for document preparation. It is widely used in academia for it reduces the formatting task to a minimum and makes it easy to type mathematical formula (in fact, almost all your classes, exercise sheets and exams are typed on Latex).
+
+There are two ways to work with Latex. Either you download a local Tex editor on your computer or you work on an online one\footnote{For the pros and cons of each see: https://tex.stackexchange.com/questions/193810/online-latex-editor-or-local-latex-editor.}. During these TDs to make your Tex editing easier I will ask you to all create a free account on Overleaf with your Polytechnique mail address. Now go on Moodle and download the ECO102\_TD2 zip file. Once done you can import it on Overleaf clicking on New Project -> Import a Project. 
+
+You should have two documents on the very left panel of your project. The first one mystyle.sty contains common useful packages to code in Latex. The second one TD2\_questions.tex is your main document. It is the script of the pdf you are currently reading. 
+
+\textbf{I will ask you to type your answers to today's exercise directly below the question in this script so that at the end of the TD we can export a pdf containing both questions and answers}\footnote{For a good, much more detailed, introduction to Latex see: https://en.wikibooks.org/wiki/LaTeX.}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Exercise}
+
+Open a do file, you will save your Stata commands in it. Other answers and comments should appear in your pdf files.
+
+\begin{enumerate}
+    \item In this part, you will generate some random data, export descriptive statistics and plot the data.
+        \begin{enumerate}
+            \item Set the seed in stata.  When running monte carlos, it is good to set the seed.  Results depend on the seed.
+            % Answer: 
+            
+            \item For 100 observations, generate $x$ and $\epsilon$.  Draw $x$ from a uniform distribution on the range (0,10).  Draw $\epsilon$ from a normal distribution with mean 0 and variance 25.
+            % Answer: 
+            
+            \item Now build $y$ according to the formula
+                \begin{equation*}
+                y_{i} = \alpha + \beta * x_{i} + + \epsilon_{i}
+                \label{eq1}
+                \end{equation*}with  $\alpha =10$ and  $\beta =2$
+            % Answer: 
+            
+            \item Compute descriptive statistics for  $y$ , $x$ and $\epsilon$ (min, max, mean, standard deviation).  Export as a table using the command sutex and compile into your pdf file.
+            % Answer: 
+            
+            \item Plot $y$ against $x$ in a scatter plot.  Export the figure and compile into your pdf file.
+            % Answer: 
+            
+        \end{enumerate}
+        
+    \item With your generated data, estimate $\alpha$ and  $\beta$ using OLS.  Plot data along with OLS best-fit line.  Include your estimated value of $\alpha$ and  $\beta$ on the graph (i.e., write the values somewhere on the graph).  Export the figure and compile into your pdf file.  Do you find that $\hat\beta = 2$?  The data was generated using $\beta=2$.  Why don't you find $\hat\beta = 2$?
+    % Answer: 
+    
+    \item Repeat parts 1 and 2 for two replications of the data.  I.e., randomly generate two different datasets, each with 100 observations.  Plot the data along with the OLS best fit line and the estimated parameters in a graph separately for each replication. Export the figure and compile into your pdf file.  Do you find the same $\hat\beta$ in the two samples?  Why not?
+    % Answer: 
+    
+    \item Now generate the data 1000 times.  I.e., generate 1000 different datasets, each time randomly drawing $x$ and $\epsilon$ and building $y_i = 10 + 2x_i + \epsilon_i$.  For each replication, estimates $\alpha$ and $\beta$ by OLS.  Save each estimate $\hat\beta$ and the standard error of the estimate.  
+    % Answer: 
+    
+        \begin{enumerate}
+            \item Plot the distribution of the 1000 $\hat\beta$'s.  Report the mean and the median of the distribution on the graph.  Export the figure and compile into your pdf file.
+            % Answer: 
+            
+            \item Compute the lower bound and upper bound of the 95\% confidence interval for each of the 1000 $\hat\beta$'s.  Plot the distributions of both the  lower bound and upper bound.  Report the share of replications for which the 95\% confidence interval covers the true value of $\beta$.  Export the figure and compile into your pdf file.
+            % Answer:
+            
+        \end{enumerate}
+    \end{enumerate}
+
+\end{document}
+
+
