@@ -1,0 +1,28 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+                    &\multicolumn{1}{c}{ln\_GDP1985}&\multicolumn{1}{c}{ln\_GDP1985}&\multicolumn{1}{c}{ln\_GDP1985}\\
+\hline
+Constant            &        8.04\sym{***}&        8.57\sym{***}&        9.14\sym{***}\\
+                    &      (1.28)         &      (1.31)         &      (2.15)         \\
+[1em]
+ln\_I/GDP            &                     &                     &                     \\
+                    &                     &                     &                     \\
+[1em]
+ln(I/GDP)           &                     &                     &                     \\
+                    &                     &                     &                     \\
+[1em]
+ln(n + g + $\delta$)&       -1.99\sym{***}&       -2.02\sym{***}&       -0.74         \\
+                    &      (0.56)         &      (0.53)         &      (0.85)         \\
+[1em]
+ln\_save             &        1.42\sym{***}&        1.32\sym{***}&        0.50         \\
+                    &      (0.14)         &      (0.17)         &      (0.43)         \\
+\hline
+\# Observations     &          98         &          75         &          22         \\
+R squared           &       0.601         &       0.599         &       0.106         \\
+Mean Dep. Var       &       8.048         &       8.403         &       9.424         \\
+\hline\hline
+\end{tabular}
+}

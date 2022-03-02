@@ -1,0 +1,112 @@
+\documentclass[11pt, a4paper]{article} % setsfont size and layout
+
+%% required packages %%
+\usepackage{mystyle} 
+\usepackage[margin=2.5cm]{geometry} % margins
+
+%% Here the main part of the document begins %%
+
+\begin{document}
+
+%% Header on first page with course information etc. %%
+\begin{tabular}{p{14.5cm}}
+	{\large \textbf{ECO 102: Topics in Economics}} \\
+	Ecole Polytechnique, Spring 2022  \\
+	\textit{Professors}: Geoffroy Barrows, Benoit Schmutz \\
+	\textit{Teaching Assistants}: Arnault Chatelain, Maddalena Conte \\
+	\hline
+	\\
+\end{tabular}
+
+\begin{center}
+	{\Large \textbf{TD3: Omitted Variable Bias}}
+	\vspace{2mm}
+	
+\end{center} 
+
+\vspace{0.4cm}
+
+In this assignment, you are going to replicate the empirical findings in Mankiew et al (1992) and extend.  Download the folder TD3.zip, type your answers directly in the Tex script and your Stata commands in a do file.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Exercise}
+
+\begin{enumerate}
+   
+    \item Load the data MRW QJE1992.xlsx into Stata.  Do all the numerical variables show up as numbers?  If not, perhaps you need to reformat some variables.
+    
+    \bigskip
+    
+     \item Export descriptive statistics for relevant variables by sample (non-oil, intermediate, OECD).
+        
+    
+\bigskip 
+
+ \item Generate a scatter plot of growth rate in GDP per capita against log GDP per worker in 1960, similar to Figure 1A in the paper.  Does your figure look exactly the same Figure 1A?  Why not? But does it look roughly similar?
+     
+ 
+
+
+\item Now estimate the ``text book'' model from Table I of the paper.  I.e., estimate by OLS the model
+
+\begin{equation*}
+\ln GDP^{pc, 1985}_{c} = \alpha + \beta_1 \ln s_{c} + \beta_2 \ln \left(n + g + \delta \right)_{c} + \epsilon_{c}
+\end{equation*}where $\ln GDP^{pc, 1985}_{c}$ is log of GDP per capita in 1985 in country $c$, $\ln s_{c}$ is the log of the savings rate (I/Y) in country $c$, and $\left(n + g + \delta \right)_{c}$ is the log of population growth rate + productivity growth rate + depreciation.  Not in the footnotes to Table I, Mankiew et al say that they set $n+\delta$ equal to 5\% for all countries.  
+
+Run the regression by sample and report coefficient estimates and standard errors along with other usual statistics related to the estimation.
+   
+\bigskip
+
+Are your answers exactly the same as in Table I?  Are they roughly the same?
+
+
+\item According to the augmented model in Makiew et al, human capital investment is correlated with physical capital investment, and they both positively affect GDP per capita in 1985.  If this is the true model, in which way are the point estimates from the ``text book'' model biased?
+
+Check that the education investment variable is correlated with the savings rate.  Present results in a regression table.
+ 
+ \bigskip 
+ 
+Are Makiew et al right to be concerned about this omitted variables?
+
+
+
+
+
+\item Now estimate the ``full'' model from Table 2 of the paper.  I.e., estimate by OLS the model
+
+\begin{equation*}
+\ln GDP^{pc, 1985}_{c} = \alpha + \beta_1 \ln s_{c} + \beta_2 \ln \left(n + g + \delta \right)_{c}   + \beta_3 \ln \left(school\right)_{c} + \epsilon_{c}
+\end{equation*}Run the regression by sample and report coefficient estimates and standard errors along with other usual statistics related to the estimation.
+   
+
+\bigskip
+
+Are your answers exactly the same as in Table II?  Are they roughly the same? \\
+
+
+\bigskip
+
+
+Do the point estimates move in the expected direction relative to Table I?
+
+
+
+\item Could there be other omitted variables?  Think of one and write it down.  If you have time, go to the Penn World Tables
+
+\url{https://www.rug.nl/ggdc/productivity/pwt/?lang=en}
+
+Download the omitted variable you are worried about.  Merge it to the dataset.  Re-run the regression including your hypothesized omitted variable.  Present the regression table.  Do the point estimates change relative to the Mankiew et al paper?  Should you send your results to a journal for publication?
+
+
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}
+
+

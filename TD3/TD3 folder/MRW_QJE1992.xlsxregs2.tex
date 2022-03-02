@@ -1,0 +1,22 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+                    &\multicolumn{1}{c}{ln\_save}&\multicolumn{1}{c}{ln\_save}&\multicolumn{1}{c}{ln\_save}\\
+\hline
+Constant            &        2.27\sym{***}&        2.25\sym{***}&        2.90\sym{***}\\
+                    &      (0.07)         &      (0.11)         &      (0.36)         \\
+[1em]
+ln(school)          &                     &                     &                     \\
+                    &                     &                     &                     \\
+[1em]
+ln\_school           &        0.35\sym{***}&        0.38\sym{***}&        0.15         \\
+                    &      (0.04)         &      (0.06)         &      (0.16)         \\
+\hline
+\# Observations     &          98         &          75         &          22         \\
+R squared           &       0.400         &       0.347         &       0.042         \\
+Mean Dep. Var       &       2.756         &       2.875         &       3.233         \\
+\hline\hline
+\end{tabular}
+}
