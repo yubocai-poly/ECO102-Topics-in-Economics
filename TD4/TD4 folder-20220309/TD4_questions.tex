@@ -1,0 +1,76 @@
+\documentclass[11pt, a4paper]{article} % setsfont size and layout
+
+%% required packages %%
+\usepackage{mystyle} 
+\usepackage[margin=2.5cm]{geometry} % margins
+
+%% Here the main part of the document begins %%
+
+\begin{document}
+
+%% Header on first page with course information etc. %%
+\begin{tabular}{p{14.5cm}}
+	{\large \textbf{ECO 102: Topics in Economics}} \\
+	Ecole Polytechnique, Spring 2022  \\
+	\textit{Professors}: Geoffroy Barrows, Benoit Schmutz \\
+	\textit{Teaching Assistants}: Arnault Chatelain, Maddalena Conte \\
+	\hline
+	\\
+\end{tabular}
+
+\begin{center}
+	{\Large \textbf{TD4: Instrumental Variables}}
+	\vspace{2mm}
+	
+\end{center} 
+
+\vspace{0.4cm}
+
+Today, we will follow \citet{albouy2012colonial}'s critic of \citet{acemoglu2001colonial}' Instrumental Variable (IV). As usual, download the folder TD4.zip, type your answers directly in the Tex script and your Stata commands in a do file.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Exercise}
+
+\begin{enumerate}
+    \item A refresher on IVs:
+        \begin{enumerate}
+            \item What is an Instrumental Variable? Why do we use them?
+            \item In the case of \citet{acemoglu2001colonial}, can you recall what they study, what variable they use as an IV and why? 
+            \item What are the two conditions that should be met when using an IV? 
+        \end{enumerate}
+    \item Go to Moodle and download the dataset ajrcomment.dta. Let us start with a short comment on the use of log in economics. 
+        \begin{enumerate}
+            \item In both papers the authors use log GDP per capita in 1995. Create a variable gdp that contains the GDP per capita in 1995. (We are referring to the natural logarithm here). 
+            \item Create a scatter plot of mortality rates (y-axis) against GDP per capita in 1995 (x-axis). Do the same with log mortality rate and log GDP. Compare the two. What do you observe? 
+            \item What is the benefit of using log values in tables? 
+        \end{enumerate}
+    \item Let us now reproduce the results of \citet{acemoglu2001colonial}.
+        \begin{enumerate}
+            \item Write down the two equations you will use in your 2 Stage Least Square (2SLS) regression (include a single control for Latitude).
+            \item Run the first stage equation. Does the instrument seem valid?
+            \item Using the command \textbf{predict}, generate a variable riskhat containing the fitted values of this first stage. 
+            \item Run the second stage regression. Comment on the results. Are the standard errors correct here? 
+            \item Run the IV regression using the \textbf{ivregress} command this time. Compare with your previous results. 
+        \end{enumerate}
+    \item We can now turn to \citet{albouy2012colonial}'s critic. Albouy's first critic concerns \citet{acemoglu2001colonial}' standard errors.
+    \begin{enumerate}
+        \item Albouy notices that our authors make conjectures about mortality rates for some countries. Notably, using mortality rate for some countries they extrapolate the mortality rate of neighbouring countries - in fact they even reuse the same rates sometimes. This violates one of the basic assumptions of OLS regression. Which one?   
+        \item To make up for this, it is possible to cluster data, that is to consider that different groups of data (say continents) are independent but the observations composing them (countries here) are not. Albouy also suggest to run an regression robust to heteroskedasticity. Do you know what this is? Can you give an example of what it corresponds to? 
+        \item Rerun the first stage equation with standard errors (SE) that are robust (\textit{i.e.} allowing for heteroskedasticity) and clustered at the mortality rate level. How does it change? 
+    \end{enumerate}
+    \item Albouy's second critic concern the validity of the data for some countries. Not only is the data for some countries simply extrapolated from neighbouring countries but also all data sources are not comparable, some rates concerning soldiers living in barracks, some concerning soldiers during campaign and some concerning forced labor. 
+    \begin{enumerate}
+        \item Retaining only countries for which the mortality rate is not extrapolated and including dummies for data sources (campaign and slave variables) and continents rerun a 2SLS regression. Comment on the first stage. What value do you find for the expropriation risk coefficient? 
+        \item Compute the GDP ratio of Mexico on the US. Now using the previous coefficient what would be the new value of this ratio were Mexico to have the same property right  as the US? Comment on the result.
+    \end{enumerate}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}
+
+
