@@ -45,4 +45,4 @@ housing survey
 
 ## Copyright
 
-Copyright [Geoffroy Barrows](https://sites.google.com/site/geoffreybarrows/), [Benoit Schmutz](https://sites.google.com/site/benoitschmutz/), Yubo Cai, Ecole Polytechnique
+Copyright by [Geoffroy Barrows](https://sites.google.com/site/geoffreybarrows/), [Benoit Schmutz](https://sites.google.com/site/benoitschmutz/), Yubo Cai, Ecole Polytechnique
