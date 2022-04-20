@@ -45,4 +45,4 @@ housing survey
 
 ## Copyright
 
-Copyright by Geoffroy Barrows), Benoit Schmutz, Yubo Cai, Ecole Polytechnique
+Copyright by Geoffroy Barrows, Benoit Schmutz, Yubo Cai, Ecole Polytechnique
