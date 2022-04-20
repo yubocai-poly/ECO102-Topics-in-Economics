@@ -1,7 +1,7 @@
 # ECO-102 Topics in Economics (Econometrics, Development Economics, Social Economics) 经济学主题(计量经济学，发展经济学与社会经济学)
 
 ## Professors
-Geoffroy Barrows, Benoit Schmutz
+[Geoffroy Barrows](https://sites.google.com/site/geoffreybarrows/), [Benoit Schmutz](https://sites.google.com/site/benoitschmutz/)
 
 ## Course Organization
 14 lectures (1.5h) and 14 Tutorials (2h) 49 hours in total with 5 ECTS
