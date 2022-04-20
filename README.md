@@ -4,7 +4,7 @@
 [Geoffroy Barrows](https://sites.google.com/site/geoffreybarrows/), [Benoit Schmutz](https://sites.google.com/site/benoitschmutz/)
 
 ## Course Organization
-14 lectures (1.5h) and 14 Tutorials (2h) 49 hours in total with 5 ECTS
+- 14 lectures (1.5h) and 14 Tutorials (2h) 49 hours in total with 5 ECTS
 
 ## Course Arrangement
 ### 📚 Part 1 - Empirical Economic Research Design with Application to Development
