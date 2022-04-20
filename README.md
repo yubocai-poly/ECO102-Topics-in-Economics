@@ -8,7 +8,7 @@
 
 ## Course Arrangement
 ### Part1 - Empirical Economic Research Design with Application to Development
-* LEC1: Linear Regression / TD1: Introduction to Stata
+* LEC1: Linear Regression / TD1: Introduction to Stata and 
 
 * LEC2: Standard Errors and Hypothesis Testing / TD2: Linear regressions and hypothesis testing Monte Carlo
 
