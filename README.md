@@ -40,3 +40,9 @@ mating using the French housing survey, illustration with graphs
 housing survey
 
 * LEC14: Networks / TD14: Review Session - General 
+
+[![Writing technical content](https://wowchemy.com/uploads/readmes/writing-technical-content.gif)](https://academic-demo.netlify.app/post/writing-technical-content/)
+
+## Copyright
+
+Copyright [Geoffroy Barrows](https://sites.google.com/site/geoffreybarrows/), [Benoit Schmutz](https://sites.google.com/site/benoitschmutz/), Yubo Cai, Ecole Polytechnique
