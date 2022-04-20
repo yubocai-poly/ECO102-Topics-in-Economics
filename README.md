@@ -7,7 +7,7 @@
 14 lectures (1.5h) and 14 Tutorials (2h) 49 hours in total with 5 ECTS
 
 ## Course Arrangement
-### Part1 - Empirical Economic Research Design with Application to Development
+### Part 1 - Empirical Economic Research Design with Application to Development
 * LEC1: Linear Regression / TD1: Introduction to Stata and 
 
 * LEC2: Standard Errors and Hypothesis Testing / TD2: Linear regressions and hypothesis testing Monte Carlo
@@ -22,7 +22,7 @@
 
 * LEC7: Fixed Effects with IV / TD7: IV example with fixed effects
 
-### Part2 - Social Interactions: Models and Empirical Illustrations
+### Part 2 - Social Interactions: Models and Empirical Illustrations
 * LEC8: Imitation and Emulation. The Social Multiplier / TD8: Consumer Theory - the Chain Rule
 
 * LEC9: Standard Errors and Hypothesis Testing / TD9: The impact of the number of children on the participation decision of
