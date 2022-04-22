@@ -135,7 +135,39 @@ clear all
 	ivregress 2sls loggdp campaign slave asia africa other (risk=logmort0), cluster(logmort0) first
 ```
 
+<img src="img/pic1.png" width = "600px" />
+
+
 - **Scilling Model**
+
+<img src="img/pic2.png" width = "600px" />
+
+```python
+x = np.arange(0, 60, 0.1)
+
+y_1 = x*(1-x/60)
+y_2 = x*(5-x/8)
+y_3 = 50 - x
+
+fig = plt.figure(figsize=(13, 10))
+plt.xlabel('Number of White', fontsize=15)
+plt.ylabel('Number of Black', fontsize=15)
+plt.title("")
+plt.plot(x, y_1, marker='', label='the population graph of white response to black')
+plt.plot(y_2, x, marker='', label='the population graph of black response to white')
+plt.plot(x, y_3, marker='', label='housing constrain')
+plt.plot(x[426], y_1[426], 'rx', label='equilibrium point 1')
+plt.plot(x[355:391], y_3[355:391],'k.', label='stable mixed equilibria')
+plt.plot(60, 0.3, 'go', label='equilibrium point 2')
+plt.plot(0.2, 40, 'bo', label='equilibrium point 3')
+plt.plot(30, 15, 'ko', label='extreme point of white')
+plt.plot(50, 20, 'ko', label='extreme point of black')
+plt.xlim(xmin = 0, xmax=80)
+plt.ylim(ymin = 0, ymax=60)
+plt.legend(loc='upper right', fontsize=15)
+plt.title('The graph of Schelling model', fontsize=15)
+plt.show()
+```
 
 [![Writing technical content](https://wowchemy.com/uploads/readmes/writing-technical-content.gif)](https://academic-demo.netlify.app/post/writing-technical-content/)
 
