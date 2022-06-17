@@ -45,10 +45,10 @@ mating using the French housing survey, illustration with graphs
 
 * [x] LEC12: Discrimination / TD12: Test
 
-* [ ] LEC13: Crime / TD13: Why do immigrants more often live in public housing? Using the French
+* [x] LEC13: Crime / TD13: Why do immigrants more often live in public housing? Using the French
 housing survey
 
-* [ ] LEC14: Networks / TD14: Review Session - General 
+* [x] LEC14: Networks / TD14: Review Session - General 
 
 ## Samples of Projects
 - **Albouy Comment on The colonial origins**
