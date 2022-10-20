@@ -169,8 +169,6 @@ plt.title('The graph of Schelling model', fontsize=15)
 plt.show()
 ```
 
-[![Writing technical content](https://wowchemy.com/uploads/readmes/writing-technical-content.gif)](https://academic-demo.netlify.app/post/writing-technical-content/)
-
 ## Tools of this course
 STATA, R studio, Latex, Overleaf, JupyterLab
 
